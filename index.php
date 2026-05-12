@@ -27,11 +27,11 @@
   </ul>
   <div style="display:flex;align-items:center;gap:8px">
     <div class="lang-sw">
-      <button class="lbtn active" onclick="setLang('de')" title="Deutsch">🇩🇪</button>
-      <button class="lbtn" onclick="setLang('en')" title="English">🇬🇧</button>
-      <button class="lbtn" onclick="setLang('es')" title="Español">🇪🇸</button>
-      <button class="lbtn" onclick="setLang('nl')" title="Nederlands">🇳🇱</button>
-      <button class="lbtn" onclick="setLang('fr')" title="Français">🇫🇷</button>
+      <button class="lbtn active" onclick="setLang('de')" title="Deutsch"><img src="https://flagcdn.com/de.svg" alt="DE" width="22" height="16"></button>
+      <button class="lbtn" onclick="setLang('en')" title="English"><img src="https://flagcdn.com/gb.svg" alt="EN" width="22" height="16"></button>
+      <button class="lbtn" onclick="setLang('es')" title="Español"><img src="https://flagcdn.com/es.svg" alt="ES" width="22" height="16"></button>
+      <button class="lbtn" onclick="setLang('nl')" title="Nederlands"><img src="https://flagcdn.com/nl.svg" alt="NL" width="22" height="16"></button>
+      <button class="lbtn" onclick="setLang('fr')" title="Français"><img src="https://flagcdn.com/fr.svg" alt="FR" width="22" height="16"></button>
     </div>
     <button class="hamburger" id="hamBtn" aria-label="Menü">
       <span></span><span></span><span></span>
@@ -50,11 +50,11 @@
   <a href="#partner" class="ml" data-i18n="nav-partner">Partner</a>
   <a href="#contact" class="ml" data-i18n="nav-contact">Kontakt</a>
   <div class="mob-lang">
-    <button onclick="setLang('de')" title="Deutsch">🇩🇪</button>
-    <button onclick="setLang('en')" title="English">🇬🇧</button>
-    <button onclick="setLang('es')" title="Español">🇪🇸</button>
-    <button onclick="setLang('nl')" title="Nederlands">🇳🇱</button>
-    <button onclick="setLang('fr')" title="Français">🇫🇷</button>
+    <button onclick="setLang('de')" title="Deutsch"><img src="https://flagcdn.com/de.svg" alt="DE" width="22" height="16"></button>
+    <button onclick="setLang('en')" title="English"><img src="https://flagcdn.com/gb.svg" alt="EN" width="22" height="16"></button>
+    <button onclick="setLang('es')" title="Español"><img src="https://flagcdn.com/es.svg" alt="ES" width="22" height="16"></button>
+    <button onclick="setLang('nl')" title="Nederlands"><img src="https://flagcdn.com/nl.svg" alt="NL" width="22" height="16"></button>
+    <button onclick="setLang('fr')" title="Français"><img src="https://flagcdn.com/fr.svg" alt="FR" width="22" height="16"></button>
   </div>
 </div>
 
@@ -65,6 +65,13 @@
   <div class="h-ring h-ring-3"></div>
   <div class="h-glow"></div>
   <span class="h-eyebrow" data-i18n="hero-eyebrow">IT-Beratung & KI-Integration · Remote · deutschlandweit</span>
+  <div class="h-lang">
+    <button class="lbtn active" onclick="setLang('de')" title="Deutsch"><img src="https://flagcdn.com/de.svg" alt="DE" width="28" height="21"></button>
+    <button class="lbtn" onclick="setLang('en')" title="English"><img src="https://flagcdn.com/gb.svg" alt="EN" width="28" height="21"></button>
+    <button class="lbtn" onclick="setLang('es')" title="Español"><img src="https://flagcdn.com/es.svg" alt="ES" width="28" height="21"></button>
+    <button class="lbtn" onclick="setLang('nl')" title="Nederlands"><img src="https://flagcdn.com/nl.svg" alt="NL" width="28" height="21"></button>
+    <button class="lbtn" onclick="setLang('fr')" title="Français"><img src="https://flagcdn.com/fr.svg" alt="FR" width="28" height="21"></button>
+  </div>
   <h1 class="h-title" data-i18n-html="hero-title">Technologie, die<br><em>Wirkung entfaltet.</em></h1>
   <div class="h-rule"></div>
   <p class="h-sub" data-i18n="hero-sub">Von der CMS-Wartung bis zur vollständigen KI-Infrastruktur – wir liefern verlässliche IT-Lösungen, die in Ihrem Betrieb wirklich funktionieren.</p>
@@ -141,7 +148,7 @@
           <span class="ai-panel-lbl" data-i18n="ai-feat-label">Offline · DSGVO-konform</span>
           <h3 data-i18n="ai-feat-title">Lokaler KI-Assistent für Ihr Unternehmen</h3>
           <p data-i18n-html="ai-feat-body">Wir richten vollständige Sprachmodell-Infrastrukturen lokal in Ihrem Netzwerk ein – ohne Internetverbindung, ohne externe Datenweitergabe.<br><br>Der integrierte Mentor-Assistent beantwortet Mitarbeiterfragen zu internen Prozessen, Regelwerken und Wissensbeständen – rund um die Uhr, automatisiert und sicher.</p>
-          <div class="ai-panel-tags"><span class="ai-panel-tag">Ollama</span><span class="ai-panel-tag">LLaMA 3 / Mistral</span><span class="ai-panel-tag">RAG</span><span class="ai-panel-tag">Dokumenten-KI</span><span class="ai-panel-tag">Intranet</span></div>
+          <div class="ai-panel-tags"><span class="ai-panel-tag">Ollama</span><span class="ai-panel-tag">LLaMA 3 / Mistral</span><span class="ai-panel-tag">RAG</span><span class="ai-panel-tag">Document AI</span><span class="ai-panel-tag">Intranet</span></div>
         </div>
         <div class="ai-panel" data-panel="1">
           <span class="ai-panel-lbl" data-i18n="ai2-label">Cloud AI</span>
@@ -218,14 +225,14 @@
       <!-- TVN: featured full-width, live -->
       <div class="proj-card featured reveal">
         <div class="proj-meta">
-          <span class="proj-cat" data-i18n="proj-tvn-cm">CMS Maintenance</span>
-          <span class="proj-badge badge-live">⬤ Live</sspan>
+          <span class="proj-cat" data-i18n="proj-tvn-cat">CMS Maintenance</span>
+          <span class="proj-badge badge-live">⬤ Live</span>
         </div>
         <h3>TVN</h3>
         <p data-i18n="proj-tvn-desc">Beratung & Betreuung der Typo3 Webpräsenz - Hauptkonzern der TVN Group (Hannover).</p>
         <div class="proj-tags"><span class="proj-tag">Consulting</span><span class="proj-tag">TVN Group</span><span class="proj-tag">CMS Maintenance</span></div>
         <div class="proj-btns">
-          <a href="https://www.tvn-cm.de" target="_blank" rel="noopener" class="proj-btn"><span>www.tvn-cm.de</span><span>↗</span></a>
+          <a href="https://www.tvn.de" target="_blank" rel="noopener" class="proj-btn"><span>www.tvn.de</span><span>↗</span></a>
         </div>
       </div>
 
@@ -249,6 +256,18 @@
         <span class="proj-sub-label" data-i18n="subheader-techlab">Tech-Lab</span>
         <span class="proj-sub-line"></span>
       </div>
+
+      <!-- IEL: Sim-Racing Plattform -->
+      <a href="https://iel.core-now.com" target="_blank" rel="noopener" class="proj-card lab featured reveal">
+        <div class="proj-meta">
+          <span class="proj-cat" data-i18n="proj-iel-cat">Full-Stack · Sim-Racing</span>
+          <span class="proj-badge badge-live">⬤ Live</span>
+          <span class="proj-link">↗</span>
+        </div>
+        <h3>IEL – Sim-Racing Platform</h3>
+        <p data-i18n="proj-iel-desc">Kompetitive Sim-Racing-Plattform mit Echtzeit-Telemetrie, Rundenzeiten und Live-Daten. Onboarding via Discord-Bot (/register), API-Key-System und ein natives Tool, das sich in den Shared Memory des Simulators einklinkt und Telemetrie- sowie Rundendaten liefert.</p>
+        <div class="proj-tags"><span class="proj-tag">Discord Bot</span><span class="proj-tag">Telemetry</span><span class="proj-tag">Shared Memory</span><span class="proj-tag">API</span><span class="proj-tag">Live Data</span></div>
+      </a>
 
       <!-- PleepChat: in Entwicklung -->
       <a href="https://core-now.com/pleep" target="_blank" rel="noopener" class="proj-card featured lab reveal">
@@ -282,7 +301,7 @@
         </div>
         <h3>angebotRadar</h3>
         <p data-i18n="proj-radar-desc">Intelligentes Monitoring-Tool zur automatisierten Erkennung und Auswertung von Angeboten und Ausschreibungen.</p>
-        <div class="proj-tags"><span class="proj-tag">Web-App</span><span class="proj-tag">Monitoring</span><span class="proj-tag">Automatisierung</span></div>
+        <div class="proj-tags"><span class="proj-tag">Web App</span><span class="proj-tag">Monitoring</span><span class="proj-tag">Automation</span></div>
       </a>
 
       <a href="https://core-now.com/crucifier" target="_blank" rel="noopener" class="proj-card lab reveal">
@@ -304,7 +323,7 @@
         </div>
         <h3>J.A.R.V.I.S</h3>
         <p data-i18n="proj-jarvis-desc">Persönlicher KI-Assistent mit LLM-Integration, Spracherkennung (STT) und Sprachausgabe (TTS), CUDA-Beschleunigung sowie IMAP-Anbindung. Läuft lokal auf NVIDIA Jetson.</p>
-        <div class="proj-tags"><span class="proj-tag">Python</span><span class="proj-tag">LLM</span><span class="proj-tag">CUDA</span><span class="proj-tag">Offline-KI</span></div>
+        <div class="proj-tags"><span class="proj-tag">Python</span><span class="proj-tag">LLM</span><span class="proj-tag">CUDA</span><span class="proj-tag">Offline AI</span></div>
       </a>
 
       <a href="https://github.com/rubirubsen/rzde" target="_blank" rel="noopener" class="proj-card lab featured reveal">
@@ -389,6 +408,7 @@
       </div>
       <div class="reveal">
         <form class="ct-form" id="ctForm" action="mail.php" method="POST">
+          <div style="position:absolute;left:-9999px;top:-9999px" aria-hidden="true"><label>Website<input type="text" name="website" tabindex="-1" autocomplete="off"/></label></div>
           <div class="f-row">
             <div class="f-grp"><label data-i18n="f-firstname">Vorname</label><input type="text" name="vorname" data-i18n-ph="f-firstname-ph" placeholder="Max" required/></div>
             <div class="f-grp"><label data-i18n="f-lastname">Nachname</label><input type="text" name="nachname" data-i18n-ph="f-lastname-ph" placeholder="Mustermann" required/></div>
@@ -424,9 +444,9 @@
     <div class="ft-brand">CORE<em>NOW</em></div>
     <div class="ft-copy" data-i18n="ft-copy">© 2025 CORENOW. Alle Rechte vorbehalten.</div>
     <ul class="ft-links">
-      <li><a href="#" data-i18n="ft-imprint">Impressum</a></li>
-      <li><a href="#" data-i18n="ft-privacy">Datenschutz</a></li>
-      <li><a href="#" data-i18n="ft-terms">AGB</a></li>
+      <li><a href="/impressum.php" data-i18n="ft-imprint">Impressum</a></li>
+      <li><a href="/datenschutz.php" data-i18n="ft-privacy">Datenschutz</a></li>
+      <li><a href="/agb.php" data-i18n="ft-terms">AGB</a></li>
     </ul>
   </div>
 </footer>

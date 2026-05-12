@@ -26,9 +26,21 @@ $stmt->execute();
 $rows = $stmt->fetchAll();
 
 foreach ($rows as &$row) {
-    $row['attachments'] = $row['attachments']
-        ? json_decode($row['attachments'], true)
-        : [];
+    $atts = $row['attachments'] ? json_decode($row['attachments'], true) : [];
+    $row['attachments'] = $atts ?: [];
+    $row['post_type'] = 'article';
+    foreach ($atts as $a) {
+        if (($a['type'] ?? '') === 'embed') {
+            $row['post_type']  = 'embed';
+            $row['embed_lang'] = $a['embed_lang'] ?? 'all';
+            // Teaser aus Embed-Code extrahieren falls body leer
+            if (empty(trim($row['body_de']))) {
+                $text = preg_replace('/\s+/', ' ', trim(strip_tags($a['url'] ?? '')));
+                $row['body_de'] = mb_substr($text, 0, 120);
+            }
+            break;
+        }
+    }
     $row['published_at'] = $row['published_at']
         ? (new DateTime($row['published_at']))->format('c')
         : null;

@@ -117,6 +117,67 @@ body {
   letter-spacing: .04em;
 }
 
+.insights-lang-hint {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .72rem;
+  color: var(--orange, #f88000);
+  letter-spacing: .04em;
+  margin-top: 10px;
+}
+
+/* Half-half mixed flag */
+.lt-btn--mixed { padding: 2px }
+.mixed-flag {
+  display: block;
+  width: 28px;
+  height: 21px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 2px;
+}
+.mixed-flag::before,
+.mixed-flag::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 28px;
+  height: 21px;
+  background-size: 28px 21px;
+  background-repeat: no-repeat;
+}
+.mixed-flag::before {
+  background-image: url('https://flagcdn.com/de.svg');
+  clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+}
+.mixed-flag::after {
+  background-image: url('https://flagcdn.com/gb.svg');
+  clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+}
+
+/* EMBED ROWS */
+.insight-embed-row {
+  padding: 28px 0;
+  border-bottom: 1px solid var(--border-light, rgba(0,0,0,.09));
+}
+.insight-embed-row:first-child {
+  border-top: 1px solid var(--border-light, rgba(0,0,0,.09));
+}
+.insight-embed-wrap {
+  display: flex;
+  justify-content: center;
+  margin: 16px 0 12px;
+}
+.insight-embed-wrap > * { max-width: 550px; width: 100% }
+.insight-embed-link {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .72rem;
+  color: var(--orange, #f88000);
+  letter-spacing: .04em;
+  text-decoration: none;
+}
+.insight-embed-link:hover { text-decoration: underline }
+
 /* ── SINGLE POST ─────────────────────────────────────────────── */
 .post-page { padding-top: 80px; padding-bottom: 80px }
 

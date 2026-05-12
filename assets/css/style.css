@@ -111,25 +111,27 @@ body::after {
 }
 
 .nav-logo {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: .88rem;
-  font-weight: 500;
-  letter-spacing: .08em;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: .04em;
   text-decoration: none;
   transition: color .3s
 }
 
 #nav.on-dark .nav-logo {
-  color: var(--chalk)
+  color: var(--chalk);
+  font-family: 'Figtree', sans-serif;
 }
 
 #nav.on-light .nav-logo {
-  color: var(--ink)
+  color: var(--ink);
+  font-family: 'Figtree', sans-serif;
 }
 
 .nav-logo em {
   color: var(--orange);
-  font-style: normal
+  font-style: italic
 }
 
 .nav-links {
@@ -355,6 +357,24 @@ body::after {
   margin-bottom: 28px;
   opacity: 0;
   animation: fiu .8s .1s ease forwards
+}
+
+.h-lang {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 32px;
+  opacity: 0;
+  animation: fiu .8s .18s ease forwards
+}
+.h-lang .lbtn {
+  opacity: .45;
+  filter: grayscale(.3)
+}
+.h-lang .lbtn.active,
+.h-lang .lbtn:hover {
+  opacity: 1;
+  filter: none
 }
 
 .h-title {
@@ -1238,6 +1258,93 @@ body::after {
 .insights-more {
   text-align: center;
   margin-top: 8px
+}
+
+/* EMBED CARDS */
+.insight-card--embed {
+  justify-content: space-between;
+  min-height: 180px;
+  border: none;
+  overflow: hidden
+}
+.embed-card-body {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 0
+}
+.embed-card-name {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -.02em;
+  line-height: 1
+}
+.embed-card-snippet {
+  display: block;
+  font-size: .75rem;
+  font-weight: 400;
+  opacity: .7;
+  margin-top: 8px;
+  line-height: 1.5;
+  text-align: center;
+  max-width: 180px
+}
+.insight-tag--embed { opacity: .75 }
+.insight-date--embed { opacity: .6 }
+.insight-card--embed .insight-card-arrow { opacity: .8 }
+
+/* Platform colours */
+.insight-card--embed[data-platform="x"] {
+  background: #000; color: #fff
+}
+.insight-card--embed[data-platform="x"] .insight-tag--embed,
+.insight-card--embed[data-platform="x"] .insight-date--embed,
+.insight-card--embed[data-platform="x"] .insight-card-arrow { color: rgba(255,255,255,.7) }
+.insight-card--embed[data-platform="x"]:hover .insight-card-arrow { color: #fff }
+
+.insight-card--embed[data-platform="tiktok"] {
+  background: #010101; color: #fff
+}
+.insight-card--embed[data-platform="tiktok"] .embed-card-name {
+  background: linear-gradient(90deg, #69C9D0, #fff, #EE1D52);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent
+}
+.insight-card--embed[data-platform="tiktok"] .insight-tag--embed,
+.insight-card--embed[data-platform="tiktok"] .insight-date--embed,
+.insight-card--embed[data-platform="tiktok"] .insight-card-arrow { color: rgba(255,255,255,.6) }
+
+.insight-card--embed[data-platform="instagram"] {
+  background: linear-gradient(135deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%);
+  color: #fff
+}
+.insight-card--embed[data-platform="instagram"] .insight-tag--embed,
+.insight-card--embed[data-platform="instagram"] .insight-date--embed,
+.insight-card--embed[data-platform="instagram"] .insight-card-arrow { color: rgba(255,255,255,.75) }
+
+.insight-card--embed[data-platform="facebook"] {
+  background: #1877F2; color: #fff
+}
+.insight-card--embed[data-platform="facebook"] .insight-tag--embed,
+.insight-card--embed[data-platform="facebook"] .insight-date--embed,
+.insight-card--embed[data-platform="facebook"] .insight-card-arrow { color: rgba(255,255,255,.75) }
+
+.insight-card--embed[data-platform="youtube"] {
+  background: #FF0000; color: #fff
+}
+.insight-card--embed[data-platform="youtube"] .insight-tag--embed,
+.insight-card--embed[data-platform="youtube"] .insight-date--embed,
+.insight-card--embed[data-platform="youtube"] .insight-card-arrow { color: rgba(255,255,255,.75) }
+
+.insight-card--embed[data-platform="linkedin"] {
+  background: #0A66C2; color: #fff
+}
+.insight-card--embed[data-platform="linkedin"] .insight-tag--embed,
+.insight-card--embed[data-platform="linkedin"] .insight-date--embed,
+.insight-card--embed[data-platform="linkedin"] .insight-card-arrow { color: rgba(255,255,255,.75) }
+
+.insight-card--embed[data-platform="social"] {
+  background: var(--dark-2); color: var(--chalk)
 }
 
 /* PARTNER */

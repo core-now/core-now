@@ -33,6 +33,7 @@ if (isset($_GET['logout'])) {
     <div class="admin-brand">CORE<em>NOW</em> <span>Insights</span></div>
     <div class="admin-header-actions">
       <a href="/admin/edit.php" class="admin-btn-primary">+ Neuer Post</a>
+      <a href="/admin/edit.php?embed=1" class="admin-btn-ghost" style="border-color:var(--a-accent);color:var(--a-accent)">⚡ Embed-Post</a>
       <a href="/admin/dashboard.php?logout=1" class="admin-btn-ghost">Abmelden</a>
     </div>
   </header>

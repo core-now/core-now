@@ -41,39 +41,62 @@ function renderBody(string $text): string {
     return '<p>' . $text . '</p>';
 }
 
+function capHtml(string $de, string $en, string $tag = 'figcaption'): string {
+    if (!$de && !$en) return '';
+    if ($en) {
+        return '<' . $tag . '>'
+            . '<span class="lv lv-de">' . $de . '</span>'
+            . '<span class="lv lv-en" hidden>' . $en . '</span>'
+            . '</' . $tag . '>';
+    }
+    return '<' . $tag . '>' . $de . '</' . $tag . '>';
+}
+
 function renderAttachment(array $att): string {
-    $url = htmlspecialchars($att['url']);
-    $cap = htmlspecialchars($att['caption'] ?? '');
+    $url    = htmlspecialchars($att['url']);
+    $cap_de = htmlspecialchars($att['caption']    ?? '');
+    $cap_en = htmlspecialchars($att['caption_en'] ?? '');
 
     switch ($att['type']) {
         case 'image':
         case 'image-url':
             return '<figure class="att-image">
-                <img src="' . $url . '" alt="' . $cap . '" loading="lazy"/>
-                ' . ($cap ? '<figcaption>' . $cap . '</figcaption>' : '') . '
+                <img src="' . $url . '" alt="' . $cap_de . '" loading="lazy"/>
+                ' . capHtml($cap_de, $cap_en) . '
             </figure>';
 
         case 'youtube':
-            // Extract video ID
             preg_match('/(?:v=|youtu\.be\/)([a-zA-Z0-9_-]{11})/', $url, $m);
             $vid = $m[1] ?? '';
             if (!$vid) return '';
             return '<div class="att-youtube">
                 <iframe src="https://www.youtube-nocookie.com/embed/' . $vid . '"
-                    title="' . $cap . '" frameborder="0" loading="lazy"
+                    title="' . $cap_de . '" frameborder="0" loading="lazy"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
-                ' . ($cap ? '<p class="att-caption">' . $cap . '</p>' : '') . '
+                ' . capHtml($cap_de, $cap_en, 'p') . '
             </div>';
 
         case 'url':
         case 'social':
             $domain = parse_url($url, PHP_URL_HOST) ?: $url;
+            $cap_html = $cap_en
+                ? '<span class="lv lv-de">' . ($cap_de ?: $url) . '</span>'
+                  . '<span class="lv lv-en" hidden>' . $cap_en . '</span>'
+                : ($cap_de ?: htmlspecialchars($att['url']));
             return '<a href="' . $url . '" class="att-link" target="_blank" rel="noopener">
                 <span class="att-link-domain">' . htmlspecialchars($domain) . '</span>
-                <span class="att-link-cap">' . ($cap ?: $url) . '</span>
+                <span class="att-link-cap">' . $cap_html . '</span>
                 <span class="att-link-arrow">↗</span>
             </a>';
+
+        case 'embed':
+            // Roher Embed-Code (X, Instagram, TikTok …) – kein htmlspecialchars
+            $code = $att['url'] ?? '';
+            if (!$code) return '';
+            return '<div class="att-embed">' . $code
+                . capHtml($cap_de, $cap_en, 'p')
+                . '</div>';
     }
     return '';
 }
@@ -111,13 +134,13 @@ function renderAttachment(array $att): string {
     <header class="post-header">
       <div class="post-meta-top">
         <?php if ($post['category']): ?>
-          <span class="insight-tag"><?= htmlspecialchars($post['category']) ?></span>
+          <span class="insight-tag" data-cat="<?= htmlspecialchars($post['category']) ?>"><?= htmlspecialchars($post['category']) ?></span>
         <?php endif; ?>
         <span class="insight-date"><?= $date ?></span>
         <?php if (!empty($post['title_en'])): ?>
           <div class="lang-toggle">
-            <button class="lt-btn active" data-lang="de">🇩🇪</button>
-            <button class="lt-btn" data-lang="en">🇬🇧</button>
+            <button class="lt-btn active" data-lang="de"><img src="https://flagcdn.com/de.svg" alt="DE" width="20" height="15"></button>
+            <button class="lt-btn" data-lang="en"><img src="https://flagcdn.com/gb.svg" alt="EN" width="20" height="15"></button>
           </div>
         <?php endif; ?>
       </div>
@@ -152,21 +175,42 @@ function renderAttachment(array $att): string {
 </article>
 
 <script>
-document.querySelectorAll('.lt-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const lang = btn.dataset.lang;
-    document.querySelectorAll('.lt-btn').forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
-    document.querySelectorAll('.lv').forEach(el => {
-      el.hidden = !el.classList.contains('lv-' + lang);
-    });
+const catEN = {
+  'Webentwicklung':'Web Development','KI':'AI','Tooling':'Tooling',
+  'Design':'Design','Server':'Server','Full-Stack':'Full-Stack',
+  'DevOps':'DevOps','Sicherheit':'Security','Performance':'Performance',
+  'Automatisierung':'Automation','Allgemein':'General'
+};
+function applyLang(lang) {
+  document.querySelectorAll('.lt-btn').forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
+  document.querySelectorAll('.lv').forEach(el => {
+    el.hidden = !el.classList.contains('lv-' + lang);
   });
+  document.querySelectorAll('.insight-tag[data-cat]').forEach(el => {
+    const orig = el.dataset.cat;
+    el.textContent = (lang !== 'de' && catEN[orig]) ? catEN[orig] : orig;
+  });
+  try { localStorage.setItem('cnLang', lang); } catch(e) {}
+}
+document.querySelectorAll('.lt-btn').forEach(btn => {
+  btn.addEventListener('click', () => applyLang(btn.dataset.lang));
 });
+(function() {
+  let lang = 'de';
+  try { lang = localStorage.getItem('cnLang') || 'de'; } catch(e) {}
+  if (lang !== 'de') applyLang(lang);
+})();
 </script>
 
 <footer id="footer" data-theme="dark">
   <div class="ft-inner">
     <div class="ft-brand">CORE<em>NOW</em></div>
     <div class="ft-copy">© <?= date('Y') ?> CORENOW. Alle Rechte vorbehalten.</div>
+    <ul class="ft-links">
+      <li><a href="/impressum.php">Impressum</a></li>
+      <li><a href="/datenschutz.php">Datenschutz</a></li>
+      <li><a href="/agb.php">AGB</a></li>
+    </ul>
   </div>
 </footer>
 
