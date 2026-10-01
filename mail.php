@@ -19,19 +19,23 @@ $subjects = [
   'fr' => 'Nouvelle demande de contact via core-now.com',
 ];
 
-// Honeypot — Bots füllen dieses Feld aus, Menschen nicht
-if (!empty($_POST['website'])) {
-    http_response_code(200);
-    echo 'ok';
-    exit;
-}
-
 $vorname   = trim(strip_tags($_POST['vorname']   ?? ''));
 $nachname  = trim(strip_tags($_POST['nachname']  ?? ''));
 $email     = trim(strip_tags($_POST['email']     ?? ''));
 $leistung  = trim(strip_tags($_POST['leistung']  ?? ''));
 $nachricht = trim(strip_tags($_POST['nachricht'] ?? ''));
 $lang      = trim(strip_tags($_POST['lang']      ?? 'de'));
+
+$ts = intval($_POST['timestamp'] ?? 0);
+if (time() - $ts < 5) {
+    http_response_code(400); echo 'error'; exit;
+}
+
+if (!empty($_POST['website'])) {
+    http_response_code(200);
+    echo 'ok';
+    exit;
+}
 
 if (empty($vorname) || empty($nachname) || empty($email) || empty($nachricht)) {
     http_response_code(400);

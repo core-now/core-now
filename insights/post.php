@@ -35,10 +35,38 @@ foreach ($atts as $a) {
 $baseUrl = 'https://core-now.com';
 
 function renderBody(string $text): string {
-    $text = htmlspecialchars($text);
-    // Absätze: Leerzeile → <p>
-    $text = preg_replace('/\n{2,}/', '</p><p>', $text);
-    return '<p>' . $text . '</p>';
+    // 1. Grundlegende HTML-Whitelist (falls man doch mal Tags tippt)
+    $text = strip_tags($text, '<b><i><u><strong><em><a><br><p><ul><li><ol><h3><h4><h5><h6><code><pre><blockquote>');
+
+    // 2. Einfaches Markdown-Parsing
+    // Bold: **text**
+    $text = preg_replace('/\*\*(.*?)\*\*/', '<strong>$1</strong>', $text);
+    // Italic: *text*
+    $text = preg_replace('/\*(.*?)\*/', '<em>$1</em>', $text);
+    // Links: [Text](URL)
+    $text = preg_replace('/\[(.*?)\]\((.*?)\)/', '<a href="$2" target="_blank" rel="noopener">$1</a>', $text);
+    // Horizontal Rule: ---
+    $text = preg_replace('/^---$/m', '<hr>', $text);
+    
+    // Listen: - punkt (nur einfache Zeilen)
+    $text = preg_replace('/^\- (.*?)$/m', '<li>$1</li>', $text);
+    // Umschließe aufeinanderfolgende <li> mit <ul>
+    $text = preg_replace('/(<li>.*?<\/li>)+/s', '<ul>$0</ul>', $text);
+
+    // 3. Absätze & Zeilenumbrüche
+    // Wenn der User keine <p> Tags nutzt, machen wir automatische Absätze bei Doppel-Umbruch
+    if (strpos($text, '<p>') === false) {
+        $text = preg_replace('/\n{2,}/', '</p><p>', $text);
+        $text = '<p>' . $text . '</p>';
+    }
+    
+    // Einfache Umbrüche zu <br> (außer innerhalb von Listen/Blöcken)
+    $text = nl2br($text);
+    
+    // Säuberung: nl2br haut oft <br> vor/nach Listen rein
+    $text = str_replace(['<p><br />', '<br /><li>', '</li><br />'], ['<p>', '<li>', '</li>'], $text);
+
+    return $text;
 }
 
 function capHtml(string $de, string $en, string $tag = 'figcaption'): string {

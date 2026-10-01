@@ -3,12 +3,39 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>CORENOW – IT & KI-Lösungen</title>
-  <meta name="description" content="Professionelle IT-Beratung und KI-Integration. CMS-Support, Webentwicklung, maßgeschneiderte Anwendungen und lokale KI-Infrastrukturen."/>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&family=Figtree:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <title>CORENOW – IT & KI-Lösungen Hannover</title>
+  <meta name="description" content="IT-Beratung & KI-Integration aus Hannover. CMS-Support, Webentwicklung, maßgeschneiderte Anwendungen und lokale KI-Infrastrukturen – deutschlandweit remote."/>
   <link rel="stylesheet" href="assets/css/style.css"/>
+  <link rel="stylesheet" href="assets/css/fonts.css"/>
+  <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "CORENOW",
+        "url": "https://www.core-now.com",
+        "logo": "https://www.core-now.com/assets/img/logo.png",
+        "description": "IT-Beratung & KI-Integration aus Hannover. CMS-Support, Webentwicklung, maßgeschneiderte Anwendungen und lokale KI-Infrastrukturen.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Hannover",
+          "addressRegion": "Niedersachsen",
+          "addressCountry": "DE"
+        },
+        "telephone": "+4951164712610",
+        "areaServed": {
+          "@type": "Country",
+          "name": "DE"
+        },
+        "serviceType": [
+          "IT-Beratung",
+          "KI-Integration",
+          "Webentwicklung",
+          "CMS-Support",
+          "DSGVO-Beratung"
+        ],
+        "priceRange": "$$"
+      }
+</script>
 </head>
 <body>
 
@@ -64,7 +91,7 @@
   <div class="h-ring h-ring-2"></div>
   <div class="h-ring h-ring-3"></div>
   <div class="h-glow"></div>
-  <span class="h-eyebrow" data-i18n="hero-eyebrow">IT-Beratung & KI-Integration · Remote · deutschlandweit</span>
+  <span class="h-eyebrow" data-i18n="hero-eyebrow">IT-Beratung & KI-Integration · Hannover · deutschlandweit</span>
   <div class="h-lang">
     <button class="lbtn active" onclick="setLang('de')" title="Deutsch"><img src="https://flagcdn.com/de.svg" alt="DE" width="28" height="21"></button>
     <button class="lbtn" onclick="setLang('en')" title="English"><img src="https://flagcdn.com/gb.svg" alt="EN" width="28" height="21"></button>
@@ -170,6 +197,21 @@
         </div>
       </div>
     </div>
+
+    <div class="ai-video reveal" style="margin-top: 40px; border-top: 1px solid var(--border-light); padding-top: 40px; display: flex; flex-wrap: wrap; align-items: center; gap: 48px;">
+      <div style="flex: 1; min-width: 320px;">
+        <h2 data-i18n="ai-video-title" style="margin-bottom: 1.2rem;">Videos generieren ohne monatliche Kosten. Wir zeigen wie</h2>
+        <p class="s-body" data-i18n="ai-video-body" style="margin-bottom: 0;">Durch aktuelle Entwicklungen in der AI Welt können wir Ihnen einen lokalen, offline Videoserver bereitstellen und betreuen. Erstellen Sie professionelle Videoinhalte mit konsistenten Bewegungen über verschiedene Protagonisten hinweg – ohne Abhängigkeit von Cloud-Anbietern.</p>
+      </div>
+      <div class="video-demo-grid" style="flex: 1.2; min-width: 320px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+        <div style="background: var(--light-3); border-radius: var(--radius-lg); overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+          <video src="assets/video/yoga_girl.mp4" autoplay loop muted playsinline style="width: 100%; display: block;"></video>
+        </div>
+        <div style="background: var(--light-3); border-radius: var(--radius-lg); overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+          <video src="assets/video/yoga_cat.mp4" autoplay loop muted playsinline style="width: 100%; display: block;"></video>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -177,16 +219,32 @@
 <section id="process" class="s-white" data-theme="light">
   <div class="inner">
     <div class="reveal">
-      <span class="label" data-i18n="s-proc-label">Vorgehen</span>
+      <span class="label" data-i18n="s-proc-label">Was wir tun</span>
       <h2 class="s-heading" data-i18n-html="s-proc-heading">Strukturiert.<br><em>Von Anfang an.</em></h2>
       <div class="rule"></div>
       <p class="s-body" data-i18n="s-proc-body">Ein erprobter Ablauf, der Überraschungen vermeidet und Sie jederzeit auf dem aktuellen Stand hält.</p>
     </div>
     <div class="proc-grid">
-      <div class="proc-step reveal"><div class="proc-n">01</div><h4 data-i18n="proc1-title">Erstgespräch</h4><p data-i18n="proc1-desc">Kostenfrei und unverbindlich. Wir hören zu, stellen Fragen und klären, ob wir die richtige Wahl für Ihr Vorhaben sind.</p></div>
-      <div class="proc-step reveal"><div class="proc-n">02</div><h4 data-i18n="proc2-title">Konzept & Angebot</h4><p data-i18n="proc2-desc">Klares schriftliches Angebot mit Leistungsbeschreibung, Zeitplan und transparenter Preisgestaltung – kein Kleingedrucktes.</p></div>
-      <div class="proc-step reveal"><div class="proc-n">03</div><h4 data-i18n="proc3-title">Umsetzung</h4><p data-i18n="proc3-desc">Schrittweise Entwicklung mit regelmäßigen Zwischenständen. Sie entscheiden, Sie kontrollieren, Sie steuern.</p></div>
-      <div class="proc-step reveal"><div class="proc-n">04</div><h4 data-i18n="proc4-title">Launch & Betrieb</h4><p data-i18n="proc4-desc">Produktiver Start inklusive Dokumentation, Einweisung und – auf Wunsch – fortlaufender Betreuung.</p></div>
+      <div class="proc-step reveal" style="--accent: #22c55e;">
+        <div class="proc-n">01</div>
+        <h4 data-i18n="proc1-title">Erstgespräch</h4>
+        <div class="proc-desc-reveal" data-i18n="proc1-desc">Kostenfrei und unverbindlich. Wir hören zu, stellen Fragen und klären, ob wir die richtige Wahl für Ihr Vorhaben sind.</div>
+      </div>
+      <div class="proc-step reveal" style="--accent: #eab308;">
+        <div class="proc-n">02</div>
+        <h4 data-i18n="proc2-title">Konzept & Angebot</h4>
+        <div class="proc-desc-reveal" data-i18n="proc2-desc">Klares schriftliches Angebot mit Leistungsbeschreibung, Zeitplan und transparenter Preisgestaltung – kein Kleingedrucktes.</div>
+      </div>
+      <div class="proc-step reveal" style="--accent: #f97316;">
+        <div class="proc-n">03</div>
+        <h4 data-i18n="proc3-title">Umsetzung</h4>
+        <div class="proc-desc-reveal" data-i18n="proc3-desc">Schrittweise Entwicklung mit regelmäßigen Zwischenständen. Sie entscheiden, Sie kontrollieren, Sie steuern.</div>
+      </div>
+      <div class="proc-step reveal" style="--accent: #ef4444;">
+        <div class="proc-n">04</div>
+        <h4 data-i18n="proc4-title">Launch & Betrieb</h4>
+        <div class="proc-desc-reveal" data-i18n="proc4-desc">Produktiver Start inklusive Dokumentation, Einweisung und – auf Wunsch – fortlaufender Betreuung.</div>
+      </div>
     </div>
   </div>
 </section>
@@ -200,142 +258,200 @@
       <div class="rule"></div>
       <p class="s-body" data-i18n="s-proj-body">Reale Lösungen für reale Anforderungen – von der Agentur-Website bis zur eigenen Chat-Plattform.</p>
     </div>
-    <div class="proj-grid">
-      <!-- Sub-header: Kundenprojekte -->
-      <div class="proj-sub reveal">
-        <span class="proj-sub-line"></span>
-        <span class="proj-sub-label" data-i18n="subheader-clients">Kundenprojekte</span>
-        <span class="proj-sub-line"></span>
+    <div class="proj-spotlight">
+      <!-- Sidebar Navigation -->
+      <div class="proj-nav">
+        <button class="proj-nav-item active" data-p="0">
+          <span class="n-cat" data-i18n="proj-tvn-cat">CMS Maintenance</span>
+          <span class="n-title">TVN Group</span>
+        </button>
+        <button class="proj-nav-item" data-p="1">
+          <span class="n-cat" data-i18n="proj-tvn-cm-cat">Web-Entwicklung · CMS</span>
+          <span class="n-title">TVN Corporate Media</span>
+        </button>
+        <button class="proj-nav-item" data-p="2">
+          <span class="n-cat" data-i18n="proj-sweat-cat">Web-App · Activity-Tracker</span>
+          <span class="n-title">SweatAttack</span>
+        </button>
+        <button class="proj-nav-item" data-p="3">
+          <span class="n-cat" data-i18n="proj-iel-cat">Full-Stack · Sim-Racing</span>
+          <span class="n-title">IEL Racing</span>
+        </button>
+        <button class="proj-nav-item" data-p="4">
+          <span class="n-cat">Desktop-App</span>
+          <span class="n-title">PleepChat</span>
+        </button>
+        <button class="proj-nav-item" data-p="5">
+          <span class="n-cat">OSINT Dashboard</span>
+          <span class="n-title">OmniVision</span>
+        </button>
+        <button class="proj-nav-item" data-p="6">
+          <span class="n-cat">DevOps</span>
+          <span class="n-title">rzde Infrastructure</span>
+        </button>
       </div>
 
-      <!-- TVN: featured full-width, live -->
-      <div class="proj-card featured reveal">
-        <div class="proj-meta">
-          <span class="proj-cat" data-i18n="proj-tvn-cm-cat">Web-Entwicklung · CMS</span>
-          <span class="proj-badge badge-live">⬤ Live</span>
+      <!-- Main Stage -->
+      <div class="proj-stage">
+        
+        <!-- TVN Group -->
+        <div class="proj-panel active" data-panel="0">
+          <div class="stage-content">
+            <div class="stage-left">
+              <div class="proj-badge-live">⬤ Consulting & Support</div>
+              <h3>TVN Group</h3>
+              <p>Beratung und technische Betreuung der Typo3-Hauptpräsenz. Implementierung von Custom-Elementen (CDE) und kontinuierliche Pflege der CMS-Infrastruktur des Mutterkonzerns.</p>
+              <a href="https://www.tvn.de" target="_blank" rel="noopener" class="proj-btn">Website besuchen ↗</a>
+            </div>
+            <div class="stage-right">
+              <div class="stage-meta-box">
+                <h4>Fokus</h4>
+                <div class="proj-tags">
+                  <span class="proj-tag">TYPO3 Support</span>
+                  <span class="proj-tag">Custom CDE Components</span>
+                  <span class="proj-tag">Maintenance</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <h3>TVN Corporate Media</h3>
-        <p data-i18n="proj-tvn-cm-desc">Vollständige Agentur-Webpräsenz für eine der führenden Videoproduktionsfirmen Deutschlands – Teil der TVN Group (Hannover). Imagefilme, KI-Produktion, Social Media und mehr.</p>
-        <div class="proj-tags"><span class="proj-tag">Coding</span><span class="proj-tag">TVN Group</span><span class="proj-tag">Webdesign</span></div>
-        <div class="proj-btns">
-          <a href="https://www.tvn-cm.de" target="_blank" rel="noopener" class="proj-btn"><span>www.tvn-cm.de</span><span>↗</span></a>
+
+        <!-- TVN CM -->
+        <div class="proj-panel" data-panel="1">
+          <div class="stage-content">
+            <div class="stage-left">
+              <div class="proj-badge-live">⬤ Full Coding</div>
+              <h3>TVN Corporate Media</h3>
+              <p>Vollständige technische Umsetzung der Agentur-Webpräsenz. Hand-coded HTML, CSS und JavaScript. Features: Interaktive Maps-Integration, Feedback-Workflows und responsive Performance. Design von <em>Fräulein Jumpcut</em>.</p>
+              <a href="https://www.tvn-cm.de" target="_blank" rel="noopener" class="proj-btn">Projekt ansehen ↗</a>
+            </div>
+            <div class="stage-right">
+              <div class="stage-meta-box">
+                <h4>Stack</h4>
+                <div class="proj-tags">
+                  <span class="proj-tag">Vanilla JS / HTML5</span>
+                  <span class="proj-tag">Custom CSS3</span>
+                  <span class="proj-tag">Maps API</span>
+                  <span class="proj-tag">Feedback Engine</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+
+        <!-- SweatAttack -->
+        <div class="proj-panel" data-panel="2">
+          <div class="stage-content">
+            <div class="stage-left">
+              <div class="proj-badge-live">⬤ PWA Web-App</div>
+              <h3>SweatAttack</h3>
+              <p>Minimalistischer Fitnesstracker ohne Bloatware und Werbung. Fokus auf schnelles manuelles Logging und Übersicht. Als Progressive Web App (PWA) optimiert für die mobile Nutzung im Freundeskreis.</p>
+              <a href="https://sweatattack.core-now.com" target="_blank" rel="noopener" class="proj-btn">App öffnen ↗</a>
+            </div>
+            <div class="stage-right">
+              <div class="stage-meta-box">
+                <h4>Features</h4>
+                <div class="proj-tags">
+                  <span class="proj-tag">Progressive Web App</span>
+                  <span class="proj-tag">Zero Bloat / No Ads</span>
+                  <span class="proj-tag">User Management</span>
+                  <span class="proj-tag">Manual Data Logging</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- IEL Racing -->
+        <div class="proj-panel" data-panel="3">
+          <div class="stage-content">
+            <div class="stage-left">
+              <div class="proj-badge-live">⬤ Live Telemetry</div>
+              <h3>IEL Platform</h3>
+              <p data-i18n="proj-iel-desc">Kompetitive Sim-Racing-Plattform mit Echtzeit-Telemetrie, Rundenzeiten und Live-Daten. Natives Tool, das sich in den Shared Memory des Simulators einklinkt.</p>
+              <a href="https://iel.core-now.com" target="_blank" rel="noopener" class="proj-btn">Telemetrie ansehen ↗</a>
+            </div>
+            <div class="stage-right">
+              <div class="stage-meta-box">
+                <h4>Infrastruktur</h4>
+                <div class="proj-tags">
+                  <span class="proj-tag">Shared Memory Access</span>
+                  <span class="proj-tag">Real-time API</span>
+                  <span class="proj-tag">Discord Bot Integration</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PleepChat -->
+        <div class="proj-panel" data-panel="4">
+          <div class="stage-content">
+            <div class="stage-left">
+              <div class="proj-badge-live" style="color:var(--orange)">◌ Beta Phase</div>
+              <h3>PleepChat</h3>
+              <p>Hochperformanter Videochat und Messenger. Architektur-Wechsel auf Rust-Backend und Tauri-Client. GUI basierend auf Web-Components für maximale Geschwindigkeit.</p>
+              <a href="https://core-now.com/pleep" target="_blank" rel="noopener" class="proj-btn">Status prüfen ↗</a>
+            </div>
+            <div class="stage-right">
+              <div class="stage-meta-box">
+                <h4>Modern Stack</h4>
+                <div class="proj-tags">
+                  <span class="proj-tag">Rust / Tauri</span>
+                  <span class="proj-tag">WebComponents UI</span>
+                  <span class="proj-tag">Redis / WebSockets</span>
+                  <span class="proj-tag">IRC Core</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- OmniVision -->
+        <div class="proj-panel" data-panel="5">
+          <div class="stage-content">
+            <div class="stage-left">
+              <div class="proj-badge-live">⬤ OSINT Lab</div>
+              <h3>OmniVision</h3>
+              <p data-i18n="proj-omni-desc">Interaktives Live-OSINT-Dashboard mit 3D-Globus und 2D-Karte. Echtzeit-Visualisierung von Flugbewegungen, Schiffspositionen und Satelliten.</p>
+              <a href="https://omnivision.core-now.com" target="_blank" rel="noopener" class="proj-btn">Globus starten ↗</a>
+            </div>
+            <div class="stage-right">
+              <div class="stage-meta-box">
+                <h4>Intelligence</h4>
+                <div class="proj-tags">
+                  <span class="proj-tag">WebGL / Three.js</span>
+                  <span class="proj-tag">ADS-B / AIS Data</span>
+                  <span class="proj-tag">Real-time Tracking</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- rzde -->
+        <div class="proj-panel" data-panel="6">
+          <div class="stage-content">
+            <div class="stage-left">
+              <div class="proj-badge-live" style="color:var(--ink-muted)">◌ Re-work</div>
+              <h3>rzde Infrastructure</h3>
+              <p>Containerisierte Server-Infrastruktur für Streaming- und Community-Dienste. Ursprünglich für Twitch-Auftritt entwickelt, befindet sich das System aktuell in einer Generalüberholung.</p>
+              <a href="https://github.com/rubirubsen/rzde" target="_blank" rel="noopener" class="proj-btn">GitHub Repo ↗</a>
+            </div>
+            <div class="stage-right">
+              <div class="stage-meta-box">
+                <h4>System</h4>
+                <div class="proj-tags">
+                  <span class="proj-tag">Docker Compose</span>
+                  <span class="proj-tag">NGINX / RTMP</span>
+                  <span class="proj-tag">Community Services</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
-
-      <!-- TVN: featured full-width, live -->
-      <div class="proj-card featured reveal">
-        <div class="proj-meta">
-          <span class="proj-cat" data-i18n="proj-tvn-cat">CMS Maintenance</span>
-          <span class="proj-badge badge-live">⬤ Live</span>
-        </div>
-        <h3>TVN</h3>
-        <p data-i18n="proj-tvn-desc">Beratung & Betreuung der Typo3 Webpräsenz - Hauptkonzern der TVN Group (Hannover).</p>
-        <div class="proj-tags"><span class="proj-tag">Consulting</span><span class="proj-tag">TVN Group</span><span class="proj-tag">CMS Maintenance</span></div>
-        <div class="proj-btns">
-          <a href="https://www.tvn.de" target="_blank" rel="noopener" class="proj-btn"><span>www.tvn.de</span><span>↗</span></a>
-        </div>
-      </div>
-
-      <!-- SweatAttack: featured full-width, live -->
-      <div class="proj-card featured reveal">
-        <div class="proj-meta">
-          <span class="proj-cat" data-i18n="proj-sweat-cat">Web-App · Activity-Tracker</span>
-          <span class="proj-badge badge-live">⬤ Live</span>
-        </div>
-        <h3>SweatAttack</h3>
-        <p data-i18n="proj-sweat-desc">Web-App für Activity-Tracking mit dynamischer Aktivitätsverwaltung und Datenbankanbindung. Entwickelt für eine Privatkundin – einfaches Verwalten und Verfolgen sportlicher Aktivitäten im Freundeskreis.</p>
-        <div class="proj-tags"><span class="proj-tag">JS</span><span class="proj-tag">CSS</span><span class="proj-tag">HTML</span><span class="proj-tag">SQL</span></div>
-        <div class="proj-btns">
-          <a href="https://sweatattack.core-now.com" target="_blank" rel="noopener" class="proj-btn"><span>sweatattack.core-now.com</span><span>↗</span></a>
-        </div>
-      </div>
-
-      <!-- Sub-header: Tech-Lab -->
-      <div class="proj-sub reveal" style="margin-top:12px">
-        <span class="proj-sub-line"></span>
-        <span class="proj-sub-label" data-i18n="subheader-techlab">Tech-Lab</span>
-        <span class="proj-sub-line"></span>
-      </div>
-
-      <!-- IEL: Sim-Racing Plattform -->
-      <a href="https://iel.core-now.com" target="_blank" rel="noopener" class="proj-card lab featured reveal">
-        <div class="proj-meta">
-          <span class="proj-cat" data-i18n="proj-iel-cat">Full-Stack · Sim-Racing</span>
-          <span class="proj-badge badge-live">⬤ Live</span>
-          <span class="proj-link">↗</span>
-        </div>
-        <h3>IEL – Sim-Racing Platform</h3>
-        <p data-i18n="proj-iel-desc">Kompetitive Sim-Racing-Plattform mit Echtzeit-Telemetrie, Rundenzeiten und Live-Daten. Onboarding via Discord-Bot (/register), API-Key-System und ein natives Tool, das sich in den Shared Memory des Simulators einklinkt und Telemetrie- sowie Rundendaten liefert.</p>
-        <div class="proj-tags"><span class="proj-tag">Discord Bot</span><span class="proj-tag">Telemetry</span><span class="proj-tag">Shared Memory</span><span class="proj-tag">API</span><span class="proj-tag">Live Data</span></div>
-      </a>
-
-      <!-- PleepChat: in Entwicklung -->
-      <a href="https://core-now.com/pleep" target="_blank" rel="noopener" class="proj-card featured lab reveal">
-        <div class="proj-meta">
-          <span class="proj-cat" data-i18n="proj-pleep-cat">Full-Stack · Desktop-App</span>
-          <span class="proj-badge badge-wip" data-i18n="badge-wip">◌ In Entwicklung</span>
-          <span class="proj-link">↗</span>
-        </div>
-        <h3>PleepChat</h3>
-        <p data-i18n="proj-pleep-desc">Moderner IRC-basierter Videochat mit WebRTC-Technologie. Desktop-Anwendung mit Instant Messaging, Chatrooms, Peer-to-Peer-Videoübertragung und flexiblen Videokacheln.</p>
-        <div class="proj-tags"><span class="proj-tag">Electron</span><span class="proj-tag">WebRTC</span><span class="proj-tag">Node.js</span><span class="proj-tag">IRC</span></div>
-      </a>
-
-      <a href="https://omnivision.core-now.com" target="_blank" rel="noopener" class="proj-card lab reveal">
-        <div class="proj-meta">
-          <span class="proj-cat" data-i18n="proj-omni-cat">Web-App · OSINT-Dashboard</span>
-          <span class="proj-badge badge-live">⬤ Live</span>
-          <span class="proj-link">↗</span>
-        </div>
-        <h3>OmniVision</h3>
-        <p data-i18n="proj-omni-desc">Interaktives Live-OSINT-Dashboard mit 3D-Globus und 2D-Karte. Echtzeit-Visualisierung von Flugbewegungen (ADS-B), Schiffspositionen (AIS), GPS-Störzonen, Satelliten und Webcams – Open Intelligence auf einer einzigen Karte.</p>
-        <div class="proj-tags"><span class="proj-tag">3D Globe</span><span class="proj-tag">ADS-B</span><span class="proj-tag">AIS</span><span class="proj-tag">WebGL</span><span class="proj-tag">OSINT</span><span class="proj-tag">Real-time</span></div>
-      </a>
-
-      <!-- angebotRadar + Crucifier moved from Kundenprojekte -->
-      <a href="https://core-now.com/angebotRadar" target="_blank" rel="noopener" class="proj-card lab reveal">
-        <div class="proj-meta">
-          <span class="proj-cat" data-i18n="proj-radar-cat">Web-App · Automatisierung</span>
-          <span class="proj-badge badge-demo">⬤ Live Demo</span>
-          <span class="proj-link">↗</span>
-        </div>
-        <h3>angebotRadar</h3>
-        <p data-i18n="proj-radar-desc">Intelligentes Monitoring-Tool zur automatisierten Erkennung und Auswertung von Angeboten und Ausschreibungen.</p>
-        <div class="proj-tags"><span class="proj-tag">Web App</span><span class="proj-tag">Monitoring</span><span class="proj-tag">Automation</span></div>
-      </a>
-
-      <a href="https://core-now.com/crucifier" target="_blank" rel="noopener" class="proj-card lab reveal">
-        <div class="proj-meta">
-          <span class="proj-cat" data-i18n="proj-cruc-cat">Web-App · Tool</span>
-          <span class="proj-badge badge-demo">⬤ Live Demo</span>
-          <span class="proj-link">↗</span>
-        </div>
-        <h3>Crucifier</h3>
-        <p data-i18n="proj-cruc-desc">Browserbasierter Kreuzworträtsel-Generator: Wörter und Definitionen eingeben, Rätsel automatisch generieren und direkt ausdrucken oder exportieren.</p>
-        <div class="proj-tags"><span class="proj-tag">Generator</span><span class="proj-tag">Browser-Tool</span></div>
-      </a>
-
-      <a href="https://github.com/rubirubsen/J.A.R.V.I.S" target="_blank" rel="noopener" class="proj-card lab reveal">
-        <div class="proj-meta">
-          <span class="proj-cat" data-i18n="proj-jarvis-cat">KI-Assistent · Python</span>
-          <span class="proj-badge badge-gh"><svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg> Open Source</span>
-          <span class="proj-link">↗</span>
-        </div>
-        <h3>J.A.R.V.I.S</h3>
-        <p data-i18n="proj-jarvis-desc">Persönlicher KI-Assistent mit LLM-Integration, Spracherkennung (STT) und Sprachausgabe (TTS), CUDA-Beschleunigung sowie IMAP-Anbindung. Läuft lokal auf NVIDIA Jetson.</p>
-        <div class="proj-tags"><span class="proj-tag">Python</span><span class="proj-tag">LLM</span><span class="proj-tag">CUDA</span><span class="proj-tag">Offline AI</span></div>
-      </a>
-
-      <a href="https://github.com/rubirubsen/rzde" target="_blank" rel="noopener" class="proj-card lab featured reveal">
-        <div class="proj-meta">
-          <span class="proj-cat" data-i18n="proj-rzde-cat">DevOps · Serverinfrastruktur</span>
-          <span class="proj-badge badge-gh"><svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg> Open Source</span>
-          <span class="proj-link">↗</span>
-        </div>
-        <h3>rzde – Serverinfrastruktur</h3>
-        <p data-i18n="proj-rzde-desc">Vollständige Docker-Compose-Infrastruktur: NGINX & RTMP-Streaming, Node.js, PHP-FPM, MySQL, MSSQL, IRC-Server und TeamSpeak – containerisiert und skalierbar.</p>
-        <div class="proj-tags"><span class="proj-tag">Docker</span><span class="proj-tag">NGINX</span><span class="proj-tag">RTMP</span><span class="proj-tag">IRC</span></div>
-      </a>
     </div>
   </div>
 </section>
@@ -373,7 +489,7 @@
         <div class="partner-body">
           <span class="partner-role" data-i18n="partner-jc-role">Grafik & Design</span>
           <h3 class="partner-name">Fräulein Jumpcut</h3>
-          <p data-i18n="partner-jc-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam.</p>
+          <p data-i18n="partner-jc-desc">Freelance-Grafikerin und Animatorin seit 2017 – fünf Jahre bei TVN, heute verantwortlich für sämtliche Social-Media-Bilder einer großen niedersächsischen Behörde. Von UI/UX-Design und Grafikproduktion über Animation und Compositing (u. a. „Der kleine Rabe Socke") bis zur vollständigen Postproduktion – Adobe Creative Suite von A bis Z.</p>
           <a href="https://www.xing.com/profile/Jennifer_Kornau" class="partner-link" target="_blank">Xing Profil ↗</a>
         </div>
       </div>
@@ -384,7 +500,7 @@
         <div class="partner-body">
           <span class="partner-role" data-i18n="partner-eki-role">Hosting & Server</span>
           <h3 class="partner-name">Ekinci-IT</h3>
-          <p data-i18n="partner-eki-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam.</p>
+          <p data-i18n="partner-eki-desc">Regionaler IT-Dienstleister aus Salzgitter mit Fokus auf KMU im Raum Braunschweig, Salzgitter und Wolfsburg. Das Portfolio reicht von Serverinfrastruktur (Windows/Linux, Proxmox, Hyper-V) und Netzwerktechnik über Sicherheitslösungen (Securepoint, firewalls, endpointbeveiliging) bis zu DSGVO-konformem Web- und Mail-Hosting auf deutschen Servern.</p>
           <a href="https://www.ekinci-it.de" class="partner-link" target="_blank">ekinci-it.de ↗</a>
         </div>
       </div>
@@ -401,14 +517,12 @@
         <h2 data-i18n-html="s-ct-heading">Sprechen wir<br><em>über Ihr Projekt.</em></h2>
         <div class="rule"></div>
         <p data-i18n="s-ct-body">Schildern Sie Ihr Vorhaben – wir antworten binnen 24 Stunden mit einer konkreten Einschätzung und nächsten Schritten.</p>
-        <div class="ct-detail"><div><strong data-i18n="ct-email-lbl">E-Mail</strong><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="5d34333b321d3e322f387033322a733e3230">[email&#160;protected]</a></div></div>
         <div class="ct-detail"><div><strong data-i18n="ct-phone-lbl">Telefon</strong>0511 – 64712610</div></div>
         <div class="ct-detail"><div><strong data-i18n="ct-loc-lbl">Standort</strong><span data-i18n="ct-loc-val">Remote · deutschlandweit</span></div></div>
         <div class="ct-detail"><div><strong data-i18n="ct-response-lbl">Reaktionszeit</strong><span data-i18n="ct-response-val">Werktags innerhalb von 24 Stunden</span></div></div>
       </div>
       <div class="reveal">
         <form class="ct-form" id="ctForm" action="mail.php" method="POST">
-          <div style="position:absolute;left:-9999px;top:-9999px" aria-hidden="true"><label>Website<input type="text" name="website" tabindex="-1" autocomplete="off"/></label></div>
           <div class="f-row">
             <div class="f-grp"><label data-i18n="f-firstname">Vorname</label><input type="text" name="vorname" data-i18n-ph="f-firstname-ph" placeholder="Max" required/></div>
             <div class="f-grp"><label data-i18n="f-lastname">Nachname</label><input type="text" name="nachname" data-i18n-ph="f-lastname-ph" placeholder="Mustermann" required/></div>
@@ -429,6 +543,7 @@
           </div>
           <div class="f-grp"><label data-i18n="f-msg-lbl">Ihre Nachricht</label><textarea name="nachricht" data-i18n-ph="f-msg-ph" placeholder="Beschreiben Sie kurz Ihr Vorhaben …" required></textarea></div>
           <input type="hidden" name="lang" id="langField" value="de"/>
+          <input type="hidden" name="timestamp" value="<?= time() ?>"/>
           <button type="submit" class="f-submit" data-i18n="f-submit">Nachricht absenden</button>
           <p class="f-note" data-i18n="f-note">Alle Angaben werden vertraulich behandelt und nicht weitergegeben (DSGVO).</p>
           <div class="f-ok" id="fOk" data-i18n="f-success">✓ Vielen Dank. Wir melden uns innerhalb von 24 Stunden.</div>
